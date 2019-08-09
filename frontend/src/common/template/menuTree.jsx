@@ -2,7 +2,7 @@ import React from 'react'
 
 export default props => (
     <li className='treeview'> 
-        <a href={props.path}> 
+        <a href={props.path} style={{cursor: "pointer"}}> 
             <i className={`fa fa-${props.icon}`}></i> <span>{props.label}</span>
             <i className='fa fa-angle-left pull-right'></i>
         </a>
