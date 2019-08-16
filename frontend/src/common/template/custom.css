@@ -1,5 +1,13 @@
-.main-footer{
+.main-footer {
     position: fixed;
     bottom: 0%;
     width: 100%;
+}
+
+.ml-1 {
+    margin-left: 1em;
+}
+
+.table-actions {
+    width: 158px;
 }
