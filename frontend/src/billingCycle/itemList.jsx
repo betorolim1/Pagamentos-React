@@ -13,8 +13,12 @@ class ItemList extends Component {
     }
 
     remove(index) {
-        if (!this.props.readOnly && this.props.list.length > 1)//TODO: Fazer regra para desabilitar o botão quando for esta condição
-        this.props.arrayRemove("billingCycleForm", this.props.field, index)
+        if (this.showDeleteButton())
+            this.props.arrayRemove("billingCycleForm", this.props.field, index)
+    }
+
+    showDeleteButton() {
+        return !this.props.readOnly && this.props.list.length > 1
     }
 
     renderRows() {
@@ -42,7 +46,7 @@ class ItemList extends Component {
                     </button>
                     <button
                         type="button"
-                        className="btn btn-danger ml-1"
+                        className={`btn btn-danger ml-1 ${!this.showDeleteButton() && "disabled"}`}
                         onClick={() => this.remove(index)}
                     >
                         <i className="fa fa-trash-o"></i>
@@ -52,7 +56,7 @@ class ItemList extends Component {
         ))
     }
 
-    render() {//TODO: Ajustar para ser possivel cadastrar um ciclo de pagamento com apenas um debito ou credito
+    render() {
         return (
             <Grid cols={this.props.cols}>
                 <fieldset>

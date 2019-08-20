@@ -50,7 +50,7 @@ export function showUpdate(billingCycle) {
     ]
 }
 
-export function showDelete(billingCycle) {// TODO: Reutilizar o método showUpdate
+export function showDelete(billingCycle) {
     return [
         showTabs("tabDelete"),
         selectTab("tabDelete"),
