@@ -7,7 +7,6 @@ import promise from "redux-promise"
 import multi from "redux-multi"
 import thunk from "redux-thunk"
 
-import App from "./main/app"
 import reducers from "./main/reducers"
 import Routes from "./main/routes"
 
